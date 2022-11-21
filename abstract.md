@@ -9,7 +9,7 @@
 |160121771307|Patale Pavan Kumar     |           |
 ### NAME OF THE PROJECT COORDINATOR : Dr. K Ramana
 ## ABSTRACT :
-Chatbots are regularly used to add to the user experience on many websites, social media apps and mobile devices. 
+Chatbots are regularly used to add to the user experience on many websites, social media apps and mobile devices. These bots are used to faster access for the information. Nowadays boys are playing a major role. Many of the chat bots are used by the people in order to access the right information from the internet.
 ## OBJECTIVES:
 To Create a chatbot that performs the following actions
 - Faster fetching and displaying of weather
