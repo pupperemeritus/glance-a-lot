@@ -35,7 +35,13 @@ A discord chatbot that can search the web using multiple search engines, set rem
 ### Front-End:
 discord
 ### Back-End:
-python
-discord.py
-openweather API
-seaborn
+- python
+- discord.py
+- openweather API
+- seaborn
+
+### References
+- https://www.freecodecamp.org/news/create-a-discord-bot-with-python/
+- https://discordpy.readthedocs.io/
+- https://seaborn.pydata.org/
+- https://openweathermap.org/api
