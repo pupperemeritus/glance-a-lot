@@ -8,19 +8,27 @@
 
 ### Title: Discord Chatbot
 
-
 | Roll No      | NAME                    | SIGNATURE |
-| -------------- | ------------------------- | ----------- |
+| ------------ | ----------------------- | --------- |
 | 160121771127 | Sri Guru Datta Pisupati |           |
 | 160121771307 | Patale Pavan Kumar      |           |
 
 ### NAME OF THE PROJECT COORDINATOR : Dr. K Ramana
 
-## ABSTRACT :
+## ABSTRACT
 
-Chatbots are regularly used to add to the user experience on many websites, social media apps and mobile devices. These bots are used to faster access for the information. Nowadays bots are playing a major role. Many of the chat bots are used by the people in order to access the right information from the internet. Bots are made from sets of algorithms that aid them in their designated tasks. These tasks include conversing with a human which attempts to mimic human behaviors or gathering content from other websites. There are several different types of bots designed to accomplish a wide variety of tasks. Some bots are automated so that there is no human effort to be made especially for the tasks
+Chatbots are regularly used to add to the user experience on many websites,
+social media apps and mobile devices.
+These bots are used to faster access for the information.
+Nowadays bots are playing a major role.
+Many of the chat bots are used by the people in order to access information.
+Bots are made from sets of algorithms that aid them in their designated tasks.
+These tasks include conversing with a human which attempts to
+mimic human behaviors or gathering content from other websites.
+There are several different types of bots designed to accomplish a wide variety
+of tasks. Some bots are automated so that there is no human effort in regular chores.
 
-## OBJECTIVES:
+## OBJECTIVES
 
 To Create a chatbot that performs the following actions
 
@@ -28,14 +36,16 @@ To Create a chatbot that performs the following actions
 - Web Search
 - Reminders
 - Server Statistics
+- Emotion Detection and providing help to emotionally distressed people
+  - (Like providing help to people sending angry or sad messages)
 
-## EXISTING SYSTEM:
+## EXISTING SYSTEM
 
 - Discord bots that manage servers with missing features
 - Specific purpose bots like music bots that dont have all the above features
 - Voice assistants that are clunky to use
 
-## DISADVANTAGES:
+## DISADVANTAGES
 
 - No ability to search in most chatbots
 - Some of the bots are privacy invasive and collect user data
@@ -50,6 +60,7 @@ A discord chatbot that can
 - set reminders
 - fetch weather data
 - provide server statistics.
+- provide help resources to emotionally distressed people
 
 ## ADVANTAGES
 
@@ -57,20 +68,23 @@ A discord chatbot that can
 - Unique combination of features
 - Speed of execution
 - Configurability
+- Providing help to those in emotional distress
 
-## Front-End:
+## Front-End
 
 discord
 
-## Back-End:
+## Back-End
 
 - python
 - discord.py
 - openweather API
 - seaborn
+- nltk
 
 ## References
 
+- [NLTK](https://nltk-trainer.readthedocs.io/en/latest/)
 - [Freecodecamp learning resource](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/https:/)
 - [discord py library docs](https://discordpy.readthedocs.io/)
 - [seaborn library docs](https://seaborn.pydata.org/)
