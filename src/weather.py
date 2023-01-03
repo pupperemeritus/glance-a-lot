@@ -45,4 +45,4 @@ city=input()
 city=city+" weather"
 
 #passing the city object to weather function
-weather(c
+weather(city)
