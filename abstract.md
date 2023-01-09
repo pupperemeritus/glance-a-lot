@@ -6,7 +6,7 @@
 
 ### Class: B.E III Semester, AI&DS-2
 
-### Title: Discord Chatbot
+### Title: Discord Chatbot with emotion detection
 
 | Roll No      | NAME                    | SIGNATURE |
 | ------------ | ----------------------- | --------- |
@@ -51,6 +51,7 @@ To Create a chatbot that performs the following actions
 - Some of the bots are privacy invasive and collect user data
 - Some of these can be slow to work and do not have enough configuration options
 - They are not very user friendly
+- Bots do not participate in improving emotional aspect of chatting on a social media platform
 
 ## PROPOSED SYSTEM
 
@@ -78,13 +79,13 @@ discord
 
 - python
 - discord.py
-- openweather API
+- openweathermap API
 - seaborn
-- nltk
+- scikitlearn
 
 ## References
 
-- [NLTK](https://nltk-trainer.readthedocs.io/en/latest/)
+- [Scikitlearn](https://scikit-learn.org/stable/modules/classes.html)
 - [Freecodecamp learning resource](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/https:/)
 - [discord py library docs](https://discordpy.readthedocs.io/)
 - [seaborn library docs](https://seaborn.pydata.org/)
