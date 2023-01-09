@@ -82,6 +82,7 @@ discord
 - openweathermap API
 - seaborn
 - scikitlearn
+- MySQL
 
 ## References
 
