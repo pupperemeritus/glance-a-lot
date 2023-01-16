@@ -20,13 +20,12 @@
 Chatbots are regularly used to add to the user experience on many websites,
 social media apps and mobile devices.
 These bots are used to faster access for the information.
-Nowadays bots are playing a major role.
-Many of the chat bots are used by the people in order to access information.
-Bots are made from sets of algorithms that aid them in their designated tasks.
-These tasks include conversing with a human which attempts to
-mimic human behaviors or gathering content from other websites.
-There are several different types of bots designed to accomplish a wide variety
-of tasks. Some bots are automated so that there is no human effort in regular chores.
+Taking care of one's mental health is important nowadays when
+social media creates echo chambers, causes fear of missing out and other issues.
+We propose a discord bot that keeps track of people going through a tough time
+using machine learning. Along with this functionality, this bot aims to provide
+web search using different search engines, server statistics and growth prediction
+using machine learning, displaying weather information and setting reminders.
 
 ## OBJECTIVES
 
@@ -50,8 +49,8 @@ To Create a chatbot that performs the following actions
 - No ability to search in most chatbots
 - Some of the bots are privacy invasive and collect user data
 - Some of these can be slow to work and do not have enough configuration options
-- They are not very user friendly
-- Bots do not participate in improving emotional aspect of chatting on a social media platform
+- Bots do not participate in improving emotional aspect of chatting on
+  a social media platform
 
 ## PROPOSED SYSTEM
 
@@ -66,17 +65,15 @@ A discord chatbot that can
 ## ADVANTAGES
 
 - Privacy respecting
-- Unique combination of features
-- Speed of execution
+- Improves the emotional aspect of using social media
 - Configurability
-- Providing help to those in emotional distress
 - Using ML to predict server growth
 
-## Front-End
+## FRONT-END
 
 discord
 
-## Back-End
+## BACK-END
 
 - python
 - discord.py
@@ -85,7 +82,7 @@ discord
 - scikitlearn
 - MySQL
 
-## References
+## REFERENCES
 
 - [Scikitlearn](https://scikit-learn.org/stable/modules/classes.html)
 - [Freecodecamp learning resource](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/https:/)
