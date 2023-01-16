@@ -4,7 +4,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.naive_bayes import MultinomialNB
 
 
-def check_state(message: str) -> str:
-    nbModel = pickle.load(open("nb.pkl", "rb"))
-    state = nbModel.predict(message)
-    return str(state)
+class EmotionDetection:
+    def __init__(self):
+        self.model = pickle.load(open("nb.pkl", "rb"))
+
+    def message(self, message):
+        return self.model.predict(message)

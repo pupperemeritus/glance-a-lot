@@ -1,4 +1,9 @@
 import discord
+import src.weather as wtr
+import src.Search as search
+import src.Reminders as rmndrs
+import src.EmotionDetection as ed
+import sqlite3 as sql
 
 
 class Glance_A_Lot_Client(discord.Client):
@@ -17,20 +22,37 @@ class Glance_A_Lot_Client(discord.Client):
         await member.create_dm()
         await member.dm_channel.send(
             f"Hello {member.name}, I hope you are doing fine. Welcome to my Discord server\n",
-            f"You can drop a message in this dm if you are feeling down",
+            "You can drop a message in this dm if you are feeling down",
         )
 
     async def on_message(self, message):
         """Function that processes message"""
         if message.author == self.client.user:
             return
-        if message.content.startsWith("$w"):
+        if message.content.startsWith("glance wthr"):
+            try:
+                cityCountry = message.content[14:]
+                city = []
+                country = []
+                commaFlag = False
+                for i in cityCountry:
+                    if i == ",":
+                        commaFlag = True
+                    if commaFlag is True:
+                        country.append(i)
+                    else:
+                        city.append(i)
+                city = str(city)
+                country = str(country)
+            except IndexError:
+                message.channel.send(
+                    "Enter valid command, separate city and country using comma"
+                )
+        if message.content.startsWith("glance srch"):
             pass
-        if message.content.startsWith("$s"):
+        if message.content.startsWith("glance remd"):
             pass
-        if message.content.startsWith("$r"):
-            pass
-        if message.content.startsWith("$"):
+        if message.content.startsWith("glance stat"):
             pass
 
     async def on_message_edit(self, message):
