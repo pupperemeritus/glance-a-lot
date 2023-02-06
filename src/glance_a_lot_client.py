@@ -7,10 +7,11 @@ import src.emotion_detection_model_loader as ed
 import src.Weather as wtr
 
 
-class Glance_A_Lot_Client(discord.Client):
+class GlanceALotClient(discord.Client):
     """Contains the code for the glance-a-lot client."""
 
     def __init__(self, guildName):
+        super().__init__(guildName)
         self.client = discord.Client()
         self.guildName = guildName
 
@@ -40,7 +41,7 @@ class Glance_A_Lot_Client(discord.Client):
             pass
         if not message.content.startsWith("glance"):
             emotion_detection_obj = ed.EmotionDetection()
-        
+            result = emotion_detection_obj.message((message.content))
 
     async def on_message_edit(self, message):
         """Function that processes message edit."""
