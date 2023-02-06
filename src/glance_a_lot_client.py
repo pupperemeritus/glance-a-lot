@@ -4,7 +4,7 @@ import sqlite3 as sql
 import discord
 
 import src.emotion_detection_model_loader as ed
-import src.Weather as wtr
+import src.weather as wtr
 
 
 class GlanceALotClient(discord.Client):
