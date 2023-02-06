@@ -28,7 +28,7 @@ def wait_time(t):
 
 def send_notification(message):
     notification.notify(
-        title='Online Classes',
+        title='remainder',
         message=message,
         app_icon=None,
         timeout=10,  # seconds
