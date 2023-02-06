@@ -1,16 +1,14 @@
+"""Creates Model"""
 import pickle
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
-import matplotlib.pyplot as plt
-
-from sklearn.pipeline import Pipeline
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics import accuracy_score, classification_report, plot_confusion_matrix
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import plot_confusion_matrix
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import MultinomialNB
 
 # Reading the data from the dataset
 df = pd.read_csv("4.1LCleaned.csv")

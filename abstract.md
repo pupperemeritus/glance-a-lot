@@ -59,7 +59,6 @@ A discord chatbot that can
 - search the web using multiple search engines
 - set reminders
 - fetch weather data
-- provide server statistics.
 - provide help resources to emotionally distressed people
 
 ## ADVANTAGES
@@ -87,5 +86,4 @@ discord
 - [Scikitlearn](https://scikit-learn.org/stable/modules/classes.html)
 - [Freecodecamp learning resource](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/https:/)
 - [discord py library docs](https://discordpy.readthedocs.io/)
-- [seaborn library docs](https://seaborn.pydata.org/)
 - [Openweathermap api](https://openweathermap.org/api)
