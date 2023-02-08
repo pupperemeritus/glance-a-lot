@@ -5,6 +5,7 @@ import discord
 
 import src.emotion_detection_model_loader as ed
 import src.weather as wtr
+from src.search import search_engine
 
 
 class GlanceALotClient(discord.Client):
@@ -15,7 +16,6 @@ class GlanceALotClient(discord.Client):
         self.client = discord.Client()
         self.guildName = guildName
         self.conn = sql.connect('glancealot.db')
-
 
     async def on_ready(self):
         """A function that is called when bot is connected to discord."""
@@ -40,13 +40,14 @@ class GlanceALotClient(discord.Client):
             weather_object = wtr.OWMWeather()
             await self.channel.send(weather_object.get_weather(city))
         if message.content.startsWith("glance srch"):
-            pass
+            await self.channel.send(search_engine(message.content[13:].split()[0], message.content[13:].split()[1]))
         if not message.content.startsWith("glance"):
             emotion_detection_obj = ed.EmotionDetection()
             result = emotion_detection_obj.message((message.content))
-            if result in ("sad","angry"):
+            if result in ("sad", "angry"):
                 cursor = self.conn.cursor()
-                cursor.execute(f"INSERT INTO emotionCounterTable values ({message.author},)")
+                cursor.execute(
+                    f"INSERT INTO emotionCounterTable values ({message.author},)")
 
     async def on_message_edit(self, message):
         """Function that processes message edit."""
