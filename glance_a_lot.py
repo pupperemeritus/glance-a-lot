@@ -1,8 +1,12 @@
 """Main module"""
+import discord
 import dotenv
 
-import src.glance_a_lot_client as client
+import src.glance_a_lot_client as galc
 
-dotenv.load_dotenv(dotenv.find_dotenv(".env"))
-DISCORD_GUILD = dotenv.dotenv_values()["DISCORD_GUILD"]
-clnt = client.GlanceALotClient(DISCORD_GUILD)
+if __name__ == '__main__':
+    dotenv.load_dotenv(dotenv.find_dotenv(".env"))
+    TOKEN = dotenv.dotenv_values()["DISCORD_TOKEN"]
+    intents = discord.Intents(messages=True, guilds=True)
+    client = galc.GlanceALotClient(intents)
+    client.run(TOKEN)
