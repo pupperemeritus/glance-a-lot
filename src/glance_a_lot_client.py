@@ -14,6 +14,8 @@ class GlanceALotClient(discord.Client):
         super().__init__(guildName)
         self.client = discord.Client()
         self.guildName = guildName
+        self.conn = sql.connect('glancealot.db')
+
 
     async def on_ready(self):
         """A function that is called when bot is connected to discord."""
@@ -42,6 +44,9 @@ class GlanceALotClient(discord.Client):
         if not message.content.startsWith("glance"):
             emotion_detection_obj = ed.EmotionDetection()
             result = emotion_detection_obj.message((message.content))
+            if result in ("sad","angry"):
+                cursor = self.conn.cursor()
+                cursor.execute(f"INSERT INTO emotionCounterTable values ({message.author},)")
 
     async def on_message_edit(self, message):
         """Function that processes message edit."""
