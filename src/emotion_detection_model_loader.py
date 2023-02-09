@@ -8,14 +8,12 @@ class EmotionDetection:
     """Loads and returns the predictions for the given message"""
 
     def __init__(self):
-        self.model = pickle.load(open("./src/nb.pkl", "rb"))
+        self.model = pickle.load(open("./nb.pkl", "rb"))
 
     def message(self, message):
         """returns the prediction for the given message"""
         x = message
-        cv = CountVectorizer()
-        x_vectorized = cv.fit_transform(x.apply(lambda x: np.str_(x)))
-        return self.model.predict(x_vectorized)
+        return self.model.predict(x)
 
 
 if __name__ == "__main__":
