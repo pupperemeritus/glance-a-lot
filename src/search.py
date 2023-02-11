@@ -6,6 +6,14 @@ GOOGLE = ['google', 'google search', 'ggl', 'googlesearch']
 YOUTUBE = ['youtube', 'yt', 'you tube', 'ytb']
 
 
+def stringify_list(results):
+    """Converts resultant list into readable form"""
+    strres = ""
+    for i, string in enumerate(results):
+        strres += str(i+1)+". "+string+"\n"
+    return strres
+
+
 def search_engine(engine, query):
     """Returns the search results"""
     if engine.lower() in GOOGLE:
@@ -13,7 +21,7 @@ def search_engine(engine, query):
     elif engine.lower() in YOUTUBE:
         videos_search = VideosSearch(query, limit=3)
         links = [link['link'] for link in videos_search.result()['result']]
-    return links
+    return stringify_list(links)
 
 
 if __name__ == "__main__":

@@ -1,12 +1,9 @@
 """Creates Model"""
 import pickle
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import plot_confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 
@@ -37,22 +34,11 @@ x_test = df_split[1]
 y_train = df_split[2]
 y_test = df_split[3]
 
-
 # Fitting to naive
 nb = MultinomialNB()
 nb.fit(x_train, y_train)
-nb.score(x_test, y_test)
 accuracyNB = nb.score(x_test, y_test)
-
-pickle.dump(nb, open("nb.pkl", "wb"))
-
-lr = LogisticRegression(max_iter=1500)
-lr.fit(x_train, y_train)
-
-pickle.dump(lr, open("lr.pkl", "wb"))
-
-accuracyLR = lr.score(x_test, y_test)
-
-plot_confusion_matrix(lr, x_test, y_test)
-plt.show()
-lr.score(x_test, y_test)
+print(accuracyNB)
+with open("nb.pkl", "wb") as f:
+    pickle.dump(nb, f)
+print(nb.predict(np.array([["Wow this is very nice"], ["hello"]])))

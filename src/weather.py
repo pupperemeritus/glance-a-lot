@@ -4,11 +4,11 @@ from datetime import datetime, timezone, timedelta
 
 
 class OWMWeather:
-    def __init__(self):
-        self.api_key = "a1311da525ca1056b2960c9fb7638023"
-        self.base_url = "http://api.openweathermap.org/data/2.5/weather?"
+    api_key = "a1311da525ca1056b2960c9fb7638023"
+    base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
-    def get_weather(self, city_name: str):
+    @classmethod
+    def get_weather(self, city_name: str) -> str:
         complete_url = self.base_url + "appid=" + self.api_key + "&q=" + city_name
         response = requests.get(complete_url)
         x = response.json()
