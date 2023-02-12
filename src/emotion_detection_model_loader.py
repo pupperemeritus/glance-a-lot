@@ -1,21 +1,19 @@
 """Loads and returns the predictions for given message"""
 import pickle
-import numpy as np
 
 
 class EmotionDetection:
     """Loads and returns the predictions for the given message"""
+    model = pickle.load(open("./src/nb.pkl", "rb"))
 
-    def __init__(self):
-        self.model = pickle.load(open("./src/nb.pkl", "rb"))
-
-    def message(self, message):
+    @classmethod
+    def message(cls, message):
         """returns the prediction for the given message"""
-        x = np.array([message]).reshape(1, -1)
-        return self.model.predict(x)
+        vectorizer = pickle.load(open("./src/vectorizer.pkl", "rb"))
+        vector = vectorizer.transform([message])
+        return cls.model.predict(vector)
 
 
 if __name__ == "__main__":
-    edo = EmotionDetection()
-    print(edo.message("Wow, this is very nice"))
-    print(edo.message("This is so sad"))
+    print(EmotionDetection.message("Wow, this is very nice"))
+    print(EmotionDetection.message("This is so sad"))
