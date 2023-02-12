@@ -72,6 +72,7 @@ class GlanceALotClient(discord.Client):
                             "I hope you can make it through this tough time")
                         cheer = ['/meme', '/xkcd', '/animals']
                         choice = choices(cheer)[0]
+                        choiceresp = {cheer[0]:"s to cheer have fun",cheer[1]:" comics to cheer up",cheer[2]:" to relax"}
                         await message.channel.send("You can type " + choice + " to ease your mind by  looking at " + choice[1:])
         print("method end")
 

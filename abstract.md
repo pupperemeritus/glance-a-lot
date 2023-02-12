@@ -24,8 +24,8 @@ Taking care of one's mental health is important nowadays when
 social media creates echo chambers, causes fear of missing out and other issues.
 We propose a discord bot that keeps track of people going through a tough time
 using machine learning. Along with this functionality, this bot aims to provide
-web search using different search engines, server statistics and growth prediction
-using machine learning, displaying weather information and setting reminders.
+web search using different search engines, detecting emotion 
+using machine learning and displaying weather information.
 
 ## OBJECTIVES
 
@@ -33,8 +33,6 @@ To Create a chatbot that performs the following actions
 
 - Fetching and displaying of weather
 - Web Search
-- Reminders
-- Server Statistics
 - Emotion Detection and providing help to emotionally distressed people
   - (Like providing help to people sending angry or sad messages)
 
@@ -57,7 +55,6 @@ To Create a chatbot that performs the following actions
 A discord chatbot that can
 
 - search the web using multiple search engines
-- set reminders
 - fetch weather data
 - provide help resources to emotionally distressed people
 
@@ -66,7 +63,6 @@ A discord chatbot that can
 - Privacy respecting
 - Improves the emotional aspect of using social media
 - Configurability
-- Using ML to predict server growth
 
 ## FRONT-END
 
@@ -77,9 +73,8 @@ discord
 - python
 - discord.py
 - openweathermap API
-- seaborn
 - scikitlearn
-- MySQL
+- MongoDB
 
 ## REFERENCES
 
@@ -87,3 +82,5 @@ discord
 - [Freecodecamp learning resource](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/https:/)
 - [discord py library docs](https://discordpy.readthedocs.io/)
 - [Openweathermap api](https://openweathermap.org/api)
+- [pymongo](https://pymongo.readthedocs.io/en/stable/index.html)
+- [MongoDB](https://www.mongodb.com/docs/)
