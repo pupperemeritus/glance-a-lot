@@ -5,6 +5,7 @@ import pymongo
 from src.emotion_detection_model_loader import EmotionDetection
 import src.weather as wtr
 from src.search import search_engine
+from random import choices
 
 
 class GlanceALotClient(discord.Client):
@@ -69,6 +70,9 @@ class GlanceALotClient(discord.Client):
                             {"user": str(message.author)}).deleted_count != 0)
                         await message.channel.send(
                             "I hope you can make it through this tough time")
+                        cheer = ['/meme', '/xkcd', '/animals']
+                        choice = choices(cheer)[0]
+                        await message.channel.send("You can type " + choice + " to ease your mind by  looking at " + choice[1:])
         print("method end")
 
     async def on_message_edit(self, before, after):
