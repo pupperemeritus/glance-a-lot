@@ -1,14 +1,15 @@
 """Creates Model"""
 import pickle
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import seaborn as sns
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import confusion_matrix
-import seaborn as sns
-import matplotlib.pyplot as plt
+
 # Reading the data from the dataset
 df = pd.read_csv("4.1LCleaned.csv")
 x = df["text"]
