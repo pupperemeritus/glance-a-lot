@@ -6,7 +6,9 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
 # Reading the data from the dataset
 df = pd.read_csv("4.1LCleaned.csv")
 x = df["text"]
@@ -37,7 +39,21 @@ y_test = df_split[3]
 # Fitting to naive
 nb = MultinomialNB()
 nb.fit(x_train, y_train)
+y_pred = nb.predict(x_test)
 accuracyNB = nb.score(x_test, y_test)
 print(accuracyNB)
 with open("nb.pkl", "wb") as f:
     pickle.dump(nb, f)
+c_matrix = confusion_matrix(y_test, y_pred)
+print(c_matrix.shape)
+df_cm = pd.DataFrame(c_matrix,
+                     index=["anger", "fear", "joy",
+                            "love", "sadness", "surprise"],
+                     columns=["anger", "fear", "joy",
+                              "love", "sadness", "surprise"]
+                     )
+sns.heatmap(df_cm, annot=True, cmap=sns.color_palette(
+    palette="viridis", as_cmap=True))
+plt.xlabel("Predicted Label")
+plt.ylabel("True Label")
+plt.show()
