@@ -41,4 +41,3 @@ accuracyNB = nb.score(x_test, y_test)
 print(accuracyNB)
 with open("nb.pkl", "wb") as f:
     pickle.dump(nb, f)
-print(nb.predict(np.array([["Wow this is very nice"], ["hello"]])))

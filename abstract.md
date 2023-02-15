@@ -84,3 +84,4 @@ discord
 - [Openweathermap api](https://openweathermap.org/api)
 - [pymongo](https://pymongo.readthedocs.io/en/stable/index.html)
 - [MongoDB](https://www.mongodb.com/docs/)
+- [Dataset](https://github.com/dair-ai/emotion_dataset)
