@@ -1,16 +1,19 @@
 """Implements the class that contains weather fetching functionality"""
 from datetime import datetime, timedelta, timezone
 
+import dotenv
 import requests
+
+dotenv.load_dotenv()
 
 
 class OWMWeather:
     """Implements weather functionality"""
-    api_key = "a1311da525ca1056b2960c9fb7638023"
+    api_key = dotenv.dotenv_values()["OWM_API_KEY"]
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
     @classmethod
-    def get_weather(cls, city_name: str) -> str:
+    def get_weather(cls, city_name: str) -> str or None:
         """Fetches weather based on city name input"""
         complete_url = cls.base_url + "appid=" + cls.api_key + "&q=" + city_name
         try:
@@ -39,7 +42,6 @@ class OWMWeather:
         except Exception as exc:
             print(" City Not Found ")
             print(exc)
-            return exc
 
     @staticmethod
     def data_to_string(data) -> str:
