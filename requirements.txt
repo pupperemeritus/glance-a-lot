@@ -1,0 +1,12 @@
+discord.py
+python-dotenv
+pymongo
+requests
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+googlesearch-python
+youtube-search-python
+
